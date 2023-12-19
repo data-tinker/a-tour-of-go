@@ -2,11 +2,13 @@ package main
 
 import "fmt"
 
+// fibonacci is a function that returns
+// a function that returns an int.
 func fibonacci() func() int {
-	num, nextNum := 0, 1
+	prevNum, currentNum, nextNum := 0, 0, 1
 	return func() int {
-		num, nextNum = nextNum, num+nextNum
-		return num
+		prevNum, currentNum, nextNum = currentNum, nextNum, currentNum+nextNum
+		return prevNum
 	}
 }
 
