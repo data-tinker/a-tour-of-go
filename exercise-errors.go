@@ -20,13 +20,10 @@ func Sqrt(x float64) (float64, error) {
 }
 
 func main() {
-	result, err := Sqrt(2)
-	if err != nil {
-		log.Fatal(err)
-	}
+	result, _ := Sqrt(2)
 	log.Println(result)
 
-	result, err = Sqrt(-2)
+	result, err := Sqrt(-2)
 	if err != nil {
 		log.Fatal(err)
 	}
