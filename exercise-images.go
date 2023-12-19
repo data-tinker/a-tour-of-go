@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"image"
 	"image/color"
+
+	"golang.org/x/tour/pic"
 )
 
 type Image struct {
@@ -25,5 +26,5 @@ func (i Image) At(x, y int) color.Color {
 
 func main() {
 	m := Image{100, 100, 100}
-	fmt.Println(m)
+	pic.ShowImage(m)
 }
